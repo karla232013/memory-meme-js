@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Game</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <script src="../js/game.js" defer></script>
+   
+
+</head>
+
+<body>
+  <main>
+ <header>
+    <span class="player"></span>
+  <button id="muteBtn">
+    <img id="muteIcon" src="../img/com-som.png" alt="Som ligado" width="24">
+  </button>
+    <span>Tempo:<span class="timer">0</span></span>
+  </header>
+  </main>
+ 
+
+  <div class="grid"></div>
+
+  <audio id="bgMusic" loop autoplay>
+    <source src="/sound/dj-snake-lil-jon-turn-down-for-what_xBkMJyHh.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="error-sound" src="../sound/faustao-errou.mp3"></audio>
+</body>
+
+</html>

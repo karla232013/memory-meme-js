@@ -1,0 +1,102 @@
+main{
+display: flex;                                        
+flex-direction: column;                               
+width: 100%;                                          
+min-width: 100%;                                     
+background-size: cover;                               
+align-items: center;                                 
+justify-content: center;                              
+padding: 0 20px 30px;                                 
+}
+
+header{
+  display: flex;                                      
+  align-items: center;                                                  
+  justify-content: space-between;                     
+  background-color:rgba(255, 255, 255, 0.9);       
+  font-size: 1.2em;                                                                
+  width: 100%;                                       
+  max-width: 680px;                                   
+  padding: 15px 30px;                                 
+  margin: 0 0 15px;                                   
+  border-radius: 5px;                                
+  gap: 15px;                                          
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff0000, #ff8000, #ffd500);
+  background-size: cover;      /* cobre toda a tela */
+  background-position: center; /* centraliza */
+  background-repeat: no-repeat;
+
+}
+
+
+.grid{
+    display: grid;
+    width: 100%;
+    max-width: 680px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin: 0 auto;
+}
+
+
+
+.card{
+    aspect-ratio: 3/4;
+    width: 100%; 
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease; 
+    transform-style: preserve-3d;
+}
+
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    transition: all 400ms ease;
+}
+
+.front{
+    transform: rotateY(180deg);
+    background-image: url(/img/Caetano.jpeg);
+}
+
+.back{
+    background-image: url(/img/Capa\ da\ carta.jpeg);
+    
+    
+    backface-visibility: hidden;
+}
+
+.reveal-card{
+    transform: rotateY(180deg);
+
+}
+ 
+.disabled-card {
+filter: saturate(0);
+opacity: 0.5;
+
+}
+
+#muteBtn {
+  border: none;
+  background: transparent; /* sem fundo */
+  cursor: pointer;
+  
+}
+
+#muteBtn img {
+  width: 35px;
+  height: 35px;
+}
